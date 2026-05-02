@@ -3,7 +3,6 @@ def findMaxAverage(nums, k):
         n = len(nums)
         ans = float('-inf')
         cs = 0
-        a = 0
         for r in range(n):
             cs += nums[r]
             if r-l+1 == k:

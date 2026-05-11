@@ -12,7 +12,7 @@ def characterReplacement(s,k):
             l += 1
         ans = max(ans,r-l+1)
     return ans
-s = "ABAB"
+s = "ABABA"
 k = 2
 result = characterReplacement(s, k)
 print("Length of longest substring after character replacement: ", result)

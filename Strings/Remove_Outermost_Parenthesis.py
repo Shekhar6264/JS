@@ -1,16 +1,14 @@
-def parenthesis(s):
+def parenthisis(s):
     count = 0
-    ans = ''
-    for i in s:
-        if i == '(':
+    res = []
+    for ch in s:
+        if ch == '(':
             if count > 0:
-                ans += i
+                res.append(ch)
             count += 1
         else:
             count -= 1
             if count > 0:
-                ans += i
-    return ans
-s = "(()())(())"
-result = parenthesis(s)
-print("String after removing outermost parentheses: ", result)
+               res.append(ch)
+    return "".join(res)
+print(parenthisis(s='(()()()()())'))

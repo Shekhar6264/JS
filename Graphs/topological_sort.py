@@ -4,7 +4,7 @@ def dfs(node,adj,vis,st):
         if not vis[nei]:
             dfs(nei,adj,vis,st)
     st.append(node)
-def topoSort(V,adj):
+def topoSort(V, adj):
     vis = [0] * V
     st = []
     for i in range(V):

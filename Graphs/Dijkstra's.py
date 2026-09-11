@@ -4,14 +4,11 @@ class Solution:
         adj = [[] for _ in range(V)]
         for u, v, w in edges:
             adj[u].append((v, w))
-            adj[v].append((u, w))    # Remove if graph is directed
-
+            adj[v].append((u, w))    
         dist = [float('inf')] * V
         dist[src] = 0
-
         pq = []
         heapq.heappush(pq, (0, src))
-
         while pq:
             d, node = heapq.heappop(pq)
             if d > dist[node]:
